@@ -1,0 +1,321 @@
+TSpin
+v7
+r0
+t319978792.248676
+cCheck dependencies
+cProcessInfoPlistFile /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Info.plist Spin-Info.plist
+cCopyStringsFile /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/MainMenu.xib
+cProcessPCH /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch.gch Spin_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/main.o /Users/ishizakitetsu/Develop/cocoa/Spin/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainController.o /Users/ishizakitetsu/Develop/cocoa/Spin/MainController.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainView.o /Users/ishizakitetsu/Develop/cocoa/Spin/MainView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesBoard.o /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesView.o /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/MacOS/Spin normal x86_64
+cTouch /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004CAA740B00000000000000EE
+t1286239243
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+c000000004C23BF2D00000000000005FF
+t1277411117
+s1535
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004B5FA877000000000000A5E0
+t1264560247
+s42464
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/CGSPrivate.h
+c000000004D60AAA200000000000038AE
+t1298180770
+s14510
+i<Carbon/Carbon.h>
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/InfoPlist.strings
+c000000004D607B9C000000000000002D
+t1298168732
+s45
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/MainMenu.xib
+c000000004D623FF60000000000007127
+t1298284534
+s28967
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/MainController.h
+c000000004D607C390000000000000108
+t1298168889
+s264
+i<Cocoa/Cocoa.h>
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/MainController.m
+c000000004D6245A0000000000000025A
+t1298285984
+s602
+i"MainController.h"
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/MainView.h
+c000000004D60CE3D00000000000000BC
+t1298189885
+s188
+i<Cocoa/Cocoa.h>
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/MainView.m
+c000000004D60EB3E0000000000000469
+t1298197310
+s1129
+i"MainView.h"
+i"SpacesBoard.h"
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.h
+c000000004D60F3F600000000000002DA
+t1298199542
+s730
+i<Cocoa/Cocoa.h>
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.m
+c000000004D62446F0000000000001D08
+t1298285679
+s7432
+i"SpacesBoard.h"
+i"SpacesView.h"
+i"CGSPrivate.h"
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.h
+c000000004D61024700000000000001B9
+t1298203207
+s441
+i<Cocoa/Cocoa.h>
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.m
+c000000004D6244EF00000000000008AA
+t1298285807
+s2218
+i"SpacesView.h"
+i"SpacesBoard.h"
+i"CGSPrivate.h"
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/SpinAppDelegate.h
+c000000004D607B9C0000000000000131
+t1298168732
+s305
+i<Cocoa/Cocoa.h>
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/SpinAppDelegate.m
+c000000004D607B9C0000000000000163
+t1298168732
+s355
+i"SpinAppDelegate.h"
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/Spin_Prefix.pch
+c000000004D607B9C000000000000008B
+t1298168732
+s139
+i<Cocoa/Cocoa.h>
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app
+t1298285984
+s102
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Info.plist
+t1298285151
+s910
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/MacOS/Spin
+t1298285984
+s31888
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/PkgInfo
+t1298285151
+s8
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1298168789
+s92
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Resources/English.lproj/MainMenu.nib
+t1298284536
+s2692
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainController.o
+t1298285984
+s15388
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainView.o
+t1298199542
+s19480
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesBoard.o
+t1298285679
+s43528
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesView.o
+t1298285807
+s30240
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/Spin.LinkFileList
+c000000004D6099B2000000000000021E
+t1298176434
+s542
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpinAppDelegate.o
+t2
+s0
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/main.o
+t1298168791
+s4992
+
+N/Users/ishizakitetsu/Develop/cocoa/Spin/main.m
+c000000004D607B9C00000000000000F9
+t1298168732
+s249
+i<Cocoa/Cocoa.h>
+
+N/var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch.gch
+t1298168791
+s54306576
+
+NSpin-Info.plist
+c000000004D62425F000000000000040B
+t1298285151
+s1035
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies319978792#319978792#0(0"0(0#1#0"8619938624#0"0#
+
+CCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainController.o /Users/ishizakitetsu/Develop/cocoa/Spin/MainController.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s319978784.229154
+e319978784.542814
+r1
+xCompileC
+xbuild/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainController.o
+x/Users/ishizakitetsu/Develop/cocoa/Spin/MainController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/ishizakitetsu/Develop/cocoa/Spin/MainController.m319978784#319978784#0(0"0(0#0#56"/Users/ishizakitetsu/Develop/cocoa/Spin/MainController.m8620212480#1421"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-generated-files.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-own-target-headers.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-all-target-headers.hmap -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-project-headers.hmap -F/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/include -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources/x86_64 -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources -include /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch -c /Users/ishizakitetsu/Develop/cocoa/Spin/MainController.m -o /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainController.o0#
+
+CCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainView.o /Users/ishizakitetsu/Develop/cocoa/Spin/MainView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s319892342.438966
+e319892342.568197
+r1
+xCompileC
+xbuild/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainView.o
+x/Users/ishizakitetsu/Develop/cocoa/Spin/MainView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/ishizakitetsu/Develop/cocoa/Spin/MainView.m319892342#319892342#0(0"0(0#0#50"/Users/ishizakitetsu/Develop/cocoa/Spin/MainView.m8617948640#1409"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-generated-files.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-own-target-headers.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-all-target-headers.hmap -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-project-headers.hmap -F/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/include -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources/x86_64 -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources -include /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch -c /Users/ishizakitetsu/Develop/cocoa/Spin/MainView.m -o /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/MainView.o0#
+
+CCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesBoard.o /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s319978479.257111
+e319978479.722822
+r1
+xCompileC
+xbuild/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesBoard.o
+x/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.m319978479#319978479#0(0"0(0#0#53"/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.m8617113248#1415"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-generated-files.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-own-target-headers.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-all-target-headers.hmap -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-project-headers.hmap -F/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/include -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources/x86_64 -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources -include /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch -c /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesBoard.m -o /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesBoard.o0#
+
+CCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesView.o /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s319978607.130902
+e319978607.633067
+r1
+xCompileC
+xbuild/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesView.o
+x/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.m319978607#319978607#0(0"0(0#0#52"/Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.m8612217024#1413"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-generated-files.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-own-target-headers.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-all-target-headers.hmap -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-project-headers.hmap -F/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/include -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources/x86_64 -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources -include /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch -c /Users/ishizakitetsu/Develop/cocoa/Spin/SpacesView.m -o /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpacesView.o0#
+
+CCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/SpinAppDelegate.o /Users/ishizakitetsu/Develop/cocoa/Spin/SpinAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/main.o /Users/ishizakitetsu/Develop/cocoa/Spin/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s319861591.853839
+e319861591.924314
+r1
+xCompileC
+xbuild/Spin.build/Debug/Spin.build/Objects-normal/x86_64/main.o
+x/Users/ishizakitetsu/Develop/cocoa/Spin/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@54"Compile /Users/ishizakitetsu/Develop/cocoa/Spin/main.m319861591#319861591#0(0"0(0#0#46"/Users/ishizakitetsu/Develop/cocoa/Spin/main.m8664606688#1401"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-generated-files.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-own-target-headers.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-all-target-headers.hmap -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-project-headers.hmap -F/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/include -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources/x86_64 -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources -include /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch -c /Users/ishizakitetsu/Develop/cocoa/Spin/main.m -o /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/main.o0#
+
+CCompileXIB /Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/MainMenu.xib
+s319977336.218752
+e319977336.345537
+r1
+xCompileXIB
+x/Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib319977336#319977336#0(0"0(0#0#66"/Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/MainMenu.xib8619707200#364"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Resources/English.lproj/MainMenu.nib /Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+
+CCopyStringsFile /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s319861589.758101
+e319861589.951275
+r1
+xCopyStringsFile
+x/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings319861589#319861589#0(0"0(0#0#71"/Users/ishizakitetsu/Develop/cocoa/Spin/English.lproj/InfoPlist.strings8658619680#364"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Resources/English.lproj0#
+
+CLd /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/MacOS/Spin normal x86_64
+s319978784.542876
+e319978784.572066
+r1
+xLd
+x/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/MacOS/Spin
+xnormal
+xx86_64
+lSLF07#2@85"Link /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/MacOS/Spin319978784#319978784#0(0"0(0#0#0"8626175360#532"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -F/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -filelist /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Objects-normal/x86_64/Spin.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/MacOS/Spin0#
+
+CProcessInfoPlistFile /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Info.plist Spin-Info.plist
+s319977951.569359
+e319977951.572047
+r1
+xProcessInfoPlistFile
+x/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Info.plist
+xSpin-Info.plist
+lSLF07#2@23"Process Spin-Info.plist319977951#319977951#0(0"0(0#0#55"/Users/ishizakitetsu/Develop/cocoa/Spin/Spin-Info.plist31244010180771952#304"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    builtin-infoPlistUtility Spin-Info.plist -genpkginfo /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch.gch Spin_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s319861589.965270
+e319861591.853675
+r1
+xProcessPCH
+x/var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch.gch
+xSpin_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@26"Precompile Spin_Prefix.pch319861589#319861591#0(0"0(0#0#55"/Users/ishizakitetsu/Develop/cocoa/Spin/Spin_Prefix.pch8663790752#1309"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-generated-files.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-own-target-headers.hmap -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-all-target-headers.hmap -iquote /Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/Spin-project-headers.hmap -F/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/include -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources/x86_64 -I/Users/ishizakitetsu/Develop/cocoa/Spin/build/Spin.build/Debug/Spin.build/DerivedSources -c /Users/ishizakitetsu/Develop/cocoa/Spin/Spin_Prefix.pch -o /var/folders/0j/0j9C5PGFEEmYZt2pHyShbE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Spin_Prefix-eawgvrgzsxhcygabfuglgyathwvf/Spin_Prefix.pch.gch0#
+
+CTouch /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app
+s319978784.572141
+e319978784.574003
+r1
+xTouch
+x/Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app
+lSLF07#2@66"Touch /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app319978784#319978784#0(0"0(0#0#0"8619707200#130"    cd /Users/ishizakitetsu/Develop/cocoa/Spin    /usr/bin/touch -c /Users/ishizakitetsu/Develop/cocoa/Spin/build/Debug/Spin.app0#
+
