@@ -8,12 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-
+enum SPACE_VIEW_ROW_AND_COL {
+	
+	SWITCH_ROW_AND_COL,
+	REAL_ROW_AND_COL
+};
 @interface SpacesBoard : NSView {
 	NSInteger spacesRow,spacesCol,spacesMax;
+	NSUInteger desktopID,rowAndColMode;
+	NSInteger tag;
 
 }
-@property NSInteger spacesRow,spacesCol,spacesMax;
+@property NSInteger spacesRow,spacesCol,spacesMax,tag;
 -(void) getSpacesMax;
 -(void)setSpacesViews;
 -(void)setSpaceFrameSize;
@@ -26,5 +32,8 @@ void spacesChangedCallback(int data1, int data2, int data3, void *userParameter)
 +(NSInteger)getSpacesCol;
 +(NSInteger)calcSpacesMax;
 -(void)spaceConfigChange:(NSNotification *)note;
+-(void)isDeskTop:(NSEvent*)event;
+-(void)setDesktopID;
+-(void)setRowAndColMode:(NSUInteger)mode;
 
 @end

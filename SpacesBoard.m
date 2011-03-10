@@ -15,6 +15,7 @@
 @synthesize spacesRow;
 @synthesize spacesCol;
 @synthesize spacesMax;
+@synthesize tag;
 NSString *SwitchSpacesNotification = @"com.apple.switchSpaces";
 
 - (id)initWithFrame:(NSRect)frame {
@@ -29,8 +30,53 @@ NSString *SwitchSpacesNotification = @"com.apple.switchSpaces";
 		CGSRegisterConnectionNotifyProc(_CGSDefaultConnection(), spacesSwitchCallback, CGSWorkspaceChangedEvent, (void *)self);
 		CGSRegisterConnectionNotifyProc(_CGSDefaultConnection(), spacesChangedCallback, CGSWorkspaceConfigurationEnabledEvent, (void *)self);
 		CGSRegisterConnectionNotifyProc(_CGSDefaultConnection(), spacesChangedCallback, CGSWorkspaceConfigurationDisabledEvent, (void *)self);
-    }
+		[NSEvent addGlobalMonitorForEventsMatchingMask:NSScrollWheelMask
+											   handler:^(NSEvent* event) {
+												  
+												   [self isDeskTop:event];
+											   }];
+	[self setDesktopID];
+	rowAndColMode=SWITCH_ROW_AND_COL;
+	}
     return self;
+}
+-(void)setRowAndColMode:(NSUInteger)mode{
+	rowAndColMode=mode;
+	[self setNeedsDisplay:YES];
+}
+	
+-(void)setDesktopID{
+	CFIndex i;
+	CFDictionaryRef w;
+	CFStringRef windowOwnerName;
+	CGRect rect;
+	CGWindowID spot_window_id;
+	CFArrayRef list =CGWindowListCopyWindowInfo( kCGWindowListOptionAll  , kCGNullWindowID);
+	CGRect screenRect=NSRectToCGRect([[NSScreen mainScreen] frame]);
+
+	for (i=0; i < CFArrayGetCount(list); i++) {
+		w = CFArrayGetValueAtIndex(list, i);
+		windowOwnerName=CFDictionaryGetValue(w, kCGWindowOwnerName);
+		//NSLog(@"winName=%@",windowOwnerName);
+		if([(NSString *)windowOwnerName isEqualToString:@"Finder"]){
+			CGRectMakeWithDictionaryRepresentation(CFDictionaryGetValue(w, kCGWindowBounds), &rect);
+			if (CGRectEqualToRect(rect ,screenRect)) {
+		
+				CFNumberGetValue(CFDictionaryGetValue(w, kCGWindowNumber),kCGWindowIDCFNumberType, &spot_window_id);
+				//NSLog(@"Desktop WindowID=%d",spot_window_id);
+				desktopID=(NSUInteger)spot_window_id;
+			}
+		}
+	}
+	
+}
+
+-(void)isDeskTop:(NSEvent*)event{
+	
+	if ([event windowNumber]==desktopID) {
+		[self scrollWheel:event];
+	}
+		
 }
 void spacesChangedCallback(int data1, int data2, int data3, void *userParameter) {
 	static NSInteger lastCols;
@@ -128,18 +174,28 @@ void spacesSwitchCallback(int data1, int data2, int data3, void *userParameter) 
 }
 
 -(void)setSpaceFrameSize{
+	NSUInteger viewRow,viewCol;
+	if (rowAndColMode==REAL_ROW_AND_COL) {
+		viewRow=spacesRow;
+		viewCol=spacesCol;
+	}
+	else {
+		viewRow=spacesCol;
+		viewCol=spacesRow;
+	}
+
 	NSRect rect;
 	NSRect bound=[self bounds];
 	rect.origin.x=VIEW_FRAME_SPACE;
-	rect.origin.y=(bound.size.height / spacesRow)*(spacesRow-1)+VIEW_FRAME_SPACE;
-	rect.size.width=(bound.size.width / spacesCol)-(VIEW_FRAME_SPACE * 2);
-	rect.size.height=(bound.size.height / spacesRow)-(VIEW_FRAME_SPACE * 2);
+	rect.origin.y=(bound.size.height / viewRow)*(viewRow-1)+VIEW_FRAME_SPACE;
+	rect.size.width=(bound.size.width / viewCol)-(VIEW_FRAME_SPACE * 2);
+	rect.size.height=(bound.size.height / viewRow)-(VIEW_FRAME_SPACE * 2);
 	NSArray *views=[self subviews];
 	if([views count]>0){ 
-		for(NSInteger j=0; j< spacesRow ;j++){
-			for(NSInteger i =0;i<spacesCol;i++){
+		for(NSInteger j=0; j< viewRow ;j++){
+			for(NSInteger i =0;i<viewCol;i++){
 				//NSLog(@"x:%f y:%f w:%f h:%f",rect.origin.x,rect.origin.y,rect.size.width,rect.size.height);
-				SpacesView *aFrame=[views objectAtIndex:i+(spacesCol*j)];
+				SpacesView *aFrame=[views objectAtIndex:i+(viewCol*j)];
 				aFrame.frame=rect;
 				rect.origin.x+=(VIEW_FRAME_SPACE *2)+rect.size.width;
 				
@@ -237,10 +293,12 @@ void spacesSwitchCallback(int data1, int data2, int data3, void *userParameter) 
 	//[self postNotificationSpacesSwitch:number_space-1];
 	CGSSetWorkspace( _CGSDefaultConnection(), number_space);
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"ActiveSpaceDidSwitchNotification" object:nil];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"com.apple.switchSpaces"object:[NSString stringWithFormat:@"%d", number_space-1]];
 	
 }
 -(void)dealloc{
 	[[NSNotificationCenter defaultCenter] removeObserver:self]; 
+	[NSEvent removeMonitor:self];
 	[super dealloc];
 }
 	

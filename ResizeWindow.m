@@ -9,7 +9,7 @@
 
 @implementation ResizeWindow
 #define MINIMUM_WINDOW_WIDTH 100
-#define MINIMUM_WINDOW_HEIGHT 100
+#define MINIMUM_WINDOW_HEIGHT 50
 -(void)awakeFromNib{
 	
 	shouldRedoInitials=YES;

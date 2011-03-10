@@ -1,2 +1,5 @@
 /* Localized versions of Info.plist keys */
 
+CFBundleName = "Spin";
+CFBundleDisplayName = "Spin";
+NSHumanReadableCopyright = "copyright mouse-ha 2011";

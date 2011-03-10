@@ -22,7 +22,7 @@
 		string_attributes = [[NSMutableDictionary dictionary] retain];
 		[string_attributes setObject:[NSColor grayColor]
 							   forKey:NSForegroundColorAttributeName];
-		[string_attributes setObject:[NSFont boldSystemFontOfSize:10.0]
+		[string_attributes setObject:[NSFont boldSystemFontOfSize:16.0]
 							   forKey: NSFontAttributeName];
 		[self setActive:NO];
 		
@@ -36,7 +36,7 @@
 	float alha;
 	
 	if (state==YES) alha=0.8;
-	else alha=0.5;
+	else alha=0.3;
 		
 	 NSArray* colorArray = [NSArray arrayWithObjects:
 								  [NSColor colorWithDeviceWhite:0.4 alpha:alha],
@@ -57,15 +57,17 @@
 	else{
 		colorArray = [self setColorArray:NO];	
 	}
-	//[path fill];
+	
 	NSGradient* gradient = [[NSGradient alloc] initWithColors:colorArray];
 	[gradient drawInBezierPath:path angle:270];
 	[[NSColor colorWithDeviceRed:0.7 green:0.7 blue:0.7 alpha:0.8] set];
 	[path setLineWidth:0.5];
 	[path stroke];
 	NSString *intString = [NSString stringWithFormat:@"%d", spaceNo];
-	NSPoint point=NSMakePoint([self bounds].size.width /2, [self bounds].size.height /2);
+	NSSize size=[intString sizeWithAttributes:string_attributes];
+	NSPoint point=NSMakePoint(([self bounds].size.width -size.width)/2, ([self bounds].size.height-size.height)/2);
 	[intString drawAtPoint:point withAttributes: string_attributes];
+	[gradient release];
 	[NSGraphicsContext restoreGraphicsState];
 
 }
@@ -86,7 +88,8 @@
 -(void)mouseUp:(NSEvent *)theEvent{
 	if ([self spaceNo]!= [self spaceNumber]) {
 		CGSSetWorkspace( _CGSDefaultConnection(), [self spaceNo]);
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"ActiveSpaceDidSwitchNotification" object:nil];
+		//[[NSNotificationCenter defaultCenter] postNotificationName:@"ActiveSpaceDidSwitchNotification" object:nil];
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"com.apple.switchSpaces"object:[NSString stringWithFormat:@"%d", [self spaceNo]-1]];
 	}
 
 	

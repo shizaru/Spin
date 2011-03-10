@@ -6,6 +6,8 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>Spin</string>
+	<key>CFBundleIconFile</key>
+	<string>spin.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.yourcompany.Spin</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -19,11 +21,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0</string>
+	<key>LSBackgroundOnly</key>
+	<true/>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.6</string>
-	<key>LSUIElement</key>
-	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

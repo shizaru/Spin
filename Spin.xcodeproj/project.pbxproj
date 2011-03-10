@@ -16,6 +16,12 @@
 		960F99A01310B78F0063EC76 /* SpacesBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F999F1310B78F0063EC76 /* SpacesBoard.m */; };
 		960F99D71310D0DA0063EC76 /* SpacesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F99D61310D0DA0063EC76 /* SpacesView.m */; };
 		963C66AF1319F216005CAD5E /* ResizeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 963C66AE1319F216005CAD5E /* ResizeWindow.m */; };
+		963C674F131A1D19005CAD5E /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963C674E131A1D19005CAD5E /* PreferenceController.m */; };
+		963C6766131A37CB005CAD5E /* Spin-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 963C6765131A37C5005CAD5E /* Spin-Info.plist */; };
+		963C6773131A3BF1005CAD5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 963C6771131A3BF1005CAD5E /* Localizable.strings */; };
+		9670A54F131A8F4C00F42DFA /* spin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9670A54E131A8F4C00F42DFA /* spin.icns */; };
+		96F6F9A7131BBC90002B2275 /* SwitcherBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F6F9A6131BBC90002B2275 /* SwitcherBoard.m */; };
+		96F8CFF7131E548B000E949D /* SwitcherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F8CFF6131E548B000E949D /* SwitcherView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +33,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		8D1107310486CEB800E47090 /* Spin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Spin-Info.plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = English; path = "English.lproj/Spin-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Spin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		960F99791310B36E0063EC76 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		960F997A1310B36E0063EC76 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
@@ -40,6 +46,17 @@
 		960F9A771310E2300063EC76 /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSPrivate.h; sourceTree = "<group>"; };
 		963C66AD1319F216005CAD5E /* ResizeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeWindow.h; sourceTree = "<group>"; };
 		963C66AE1319F216005CAD5E /* ResizeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizeWindow.m; sourceTree = "<group>"; };
+		963C674D131A1D19005CAD5E /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		963C674E131A1D19005CAD5E /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		963C6767131A37D8005CAD5E /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Japanese; path = "Japanese.lproj/Spin-Info.plist"; sourceTree = "<group>"; };
+		963C676E131A3B21005CAD5E /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		963C6772131A3BF1005CAD5E /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		963C6774131A3C06005CAD5E /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9670A54E131A8F4C00F42DFA /* spin.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = spin.icns; sourceTree = "<group>"; };
+		96F6F9A5131BBC90002B2275 /* SwitcherBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitcherBoard.h; sourceTree = "<group>"; };
+		96F6F9A6131BBC90002B2275 /* SwitcherBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitcherBoard.m; sourceTree = "<group>"; };
+		96F8CFF5131E548B000E949D /* SwitcherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitcherView.h; sourceTree = "<group>"; };
+		96F8CFF6131E548B000E949D /* SwitcherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitcherView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +78,18 @@
 				963C66AE1319F216005CAD5E /* ResizeWindow.m */,
 				960F99821310B4E60063EC76 /* MainView.h */,
 				960F99831310B4E60063EC76 /* MainView.m */,
+				963C674D131A1D19005CAD5E /* PreferenceController.h */,
+				963C674E131A1D19005CAD5E /* PreferenceController.m */,
 				960F999E1310B78F0063EC76 /* SpacesBoard.h */,
 				960F999F1310B78F0063EC76 /* SpacesBoard.m */,
 				960F99791310B36E0063EC76 /* MainController.h */,
 				960F997A1310B36E0063EC76 /* MainController.m */,
 				960F99D51310D0DA0063EC76 /* SpacesView.h */,
 				960F99D61310D0DA0063EC76 /* SpacesView.m */,
+				96F6F9A5131BBC90002B2275 /* SwitcherBoard.h */,
+				96F6F9A6131BBC90002B2275 /* SwitcherBoard.m */,
+				96F8CFF5131E548B000E949D /* SwitcherView.h */,
+				96F8CFF6131E548B000E949D /* SwitcherView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -122,9 +145,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107310486CEB800E47090 /* Spin-Info.plist */,
+				9670A54E131A8F4C00F42DFA /* spin.icns */,
+				963C6765131A37C5005CAD5E /* Spin-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				963C6771131A3BF1005CAD5E /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -190,6 +215,9 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				963C6766131A37CB005CAD5E /* Spin-Info.plist in Resources */,
+				963C6773131A3BF1005CAD5E /* Localizable.strings in Resources */,
+				9670A54F131A8F4C00F42DFA /* spin.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +234,9 @@
 				960F99A01310B78F0063EC76 /* SpacesBoard.m in Sources */,
 				960F99D71310D0DA0063EC76 /* SpacesView.m in Sources */,
 				963C66AF1319F216005CAD5E /* ResizeWindow.m in Sources */,
+				963C674F131A1D19005CAD5E /* PreferenceController.m in Sources */,
+				96F6F9A7131BBC90002B2275 /* SwitcherBoard.m in Sources */,
+				96F8CFF7131E548B000E949D /* SwitcherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +247,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				089C165DFE840E0CC02AAC07 /* English */,
+				963C676E131A3B21005CAD5E /* Japanese */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -226,6 +258,24 @@
 				1DDD58150DA1D0A300B32029 /* English */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		963C6765131A37C5005CAD5E /* Spin-Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D1107310486CEB800E47090 /* English */,
+				963C6767131A37D8005CAD5E /* Japanese */,
+			);
+			name = "Spin-Info.plist";
+			sourceTree = "<group>";
+		};
+		963C6771131A3BF1005CAD5E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				963C6772131A3BF1005CAD5E /* Japanese */,
+				963C6774131A3C06005CAD5E /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -242,7 +292,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Spin_Prefix.pch;
-				INFOPLIST_FILE = "Spin-Info.plist";
+				INFOPLIST_FILE = "English.lproj/Spin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = Spin;
 			};
@@ -256,7 +306,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Spin_Prefix.pch;
-				INFOPLIST_FILE = "Spin-Info.plist";
+				INFOPLIST_FILE = "English.lproj/Spin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = Spin;
 			};

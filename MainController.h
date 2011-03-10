@@ -7,12 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "MainView.h"
 
 @interface MainController : NSObject {
 
 	IBOutlet NSWindow *window;
-	IBOutlet NSView *view;
+	IBOutlet MainView *view;
 }
-
+-(IBAction)quitSpin:(id)sender;
+-(IBAction)showAboutPanel:(id)sender;
 @end

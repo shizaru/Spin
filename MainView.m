@@ -7,46 +7,115 @@
 
 #import "MainView.h"
 #import "SpacesBoard.h"
+#import "SwitcherBoard.h"
 #define VIEW_MARGIN 5
 #define VIEW_TOPZONE_MARGIN 10
+
 @implementation MainView
 -(void)awakeFromNib{
 	NSRect rect=NSMakeRect(0, 0, 10, 10) ;
 	
 	SpacesBoard *spboard=[[SpacesBoard alloc] initWithFrame:rect];
+	[spboard setTag:SPIN_SPACE_VIEW];
 	[self addSubview:spboard];
 	[spboard release];
+	NSUserDefaults* df=[NSUserDefaults standardUserDefaults];
+	if ([[df valueForKey:@"enableTaskSwitcher"] boolValue]) {
+		[self addSwitcherView];
+		
+	}
+	
+	BOOL mode=[df boolForKey:@"VIEW_PLACE_HOLIZONTALLY"];
+	if (mode) {
+		[self setViewMode:MAIN_VIEW_HORIZONTAL];
+	}
+	else {
+		[self setViewMode:MAIN_VIEW_VERTICAL];
+	}
+	
 	
 }
-
+-(void)setViewMode:(NSUInteger)mode{
+	
+	viewMode=mode;
+	SpacesBoard* sbview=[[self subviews] objectAtIndex:0];
+	[sbview setRowAndColMode:mode];
+	[self setNeedsDisplay:YES];
+	//[self setNeedsDisplayInRect:[self bounds]];
+}
+	
+-(void)addSwitcherView{
+	SwitcherBoard *swboard=[[SwitcherBoard alloc] initWithFrame:NSMakeRect(0, 0, 10, 10)];
+	[swboard setTag:SPIN_SWITCHER_VIEW];
+	[self addSubview:swboard];
+	[swboard release];
+}
+-(void)removeSwitcherView{
+	SwitcherBoard* sbview=[[self subviews] objectAtIndex:1];
+	[sbview removeFromSuperview];
+	
+}
+-(void)setSwitchViewMode:(NSInteger)mode{
+	if ([[self subviews] count]>1){
+		SwitcherBoard* sbview=[[self subviews] objectAtIndex:1];
+		[sbview setMode:mode];
+		[sbview setNeedsDisplay:YES];
+	}
+}
+-(void)resetCursorRects{
+	
+	NSCursor* arrowCursor    = [NSCursor arrowCursor];
+	[self addCursorRect:[self frame] cursor:arrowCursor];
+}
+	
 - (void)drawRect:(NSRect)dirtyRect {
     // Drawing code here.
-	//NSUInteger mode=BUTTON_TYPE_SHORT;
+	[NSGraphicsContext saveGraphicsState];
 	
-	//view全体を半透明でぬりつぶす
-	NSRect viewBound=[self bounds];
-		
-	[[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.5] set];
-	NSRectFill([self frame]);
-	//[self setSpaceFrameSize];
+	
+	NSBezierPath* path = [NSBezierPath bezierPathWithRoundedRect:[self bounds] xRadius:10 yRadius:10];	
+	[[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.6] set];
+	[path fill];
+	// draw subview
 	NSArray *views=[self subviews];
 	if(views){
+		NSRect viewBound=[self bounds];
 		NSRect rect;
-		rect.origin.x=viewBound.origin.x+VIEW_MARGIN;
-		rect.origin.y=viewBound.origin.y+VIEW_MARGIN;
-		rect.size.width=(viewBound.size.width /[views count])-VIEW_MARGIN*2 ;
-		rect.size.height=viewBound.size.height-(VIEW_MARGIN*2+VIEW_TOPZONE_MARGIN);
-		for(NSView * sbview in views){
-			[sbview setFrame:rect];
+		//size of subview
+		if (viewMode==MAIN_VIEW_HORIZONTAL) {
+			rect.size.width=(viewBound.size.width /[views count])-VIEW_MARGIN*2-2 ;
+			rect.size.height=viewBound.size.height-(VIEW_MARGIN*2+VIEW_TOPZONE_MARGIN);
+		
+			//position of subview
+			for (NSInteger i=0;i<[views count];i++){
+				NSView* sbview=[views objectAtIndex:i];
+				rect.origin.x=VIEW_MARGIN+VIEW_MARGIN*i +viewBound.origin.x+((rect.size.width)* i)+VIEW_MARGIN;
+				rect.origin.y=viewBound.origin.y+VIEW_MARGIN;
+				
+				[sbview setFrame:rect];
+			}
+		}
+		else{
+			rect.size.width=viewBound.size.width-(VIEW_MARGIN*2);
+			rect.size.height=(viewBound.size.height /[views count])-VIEW_MARGIN*2-2 ;
+			for (NSInteger i=0;i<[views count];i++){
+				NSView* sbview=[views objectAtIndex:i];
+				//rect.origin.y=VIEW_MARGIN+VIEW_MARGIN*i +viewBound.origin.y+((rect.size.height)* i)+VIEW_MARGIN;
+				rect.origin.y=viewBound.size.height-rect.size.height-(rect.size.height* i)-VIEW_MARGIN-VIEW_TOPZONE_MARGIN;
+				rect.origin.x=viewBound.origin.x+VIEW_MARGIN;
+				
+				[sbview setFrame:rect];
+			}
 		}
 	}
-	//NSImage *button=[NSImage imageNamed:NSImageNameFollowLinkFreestandingTemplate];
-	//[button setSize:NSMakeSize(32,32)];
-	//[button drawAtPoint:NSMakePoint(2,2 ) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+	[NSGraphicsContext restoreGraphicsState];
 		
 			
 }
-
+-(void)rightMouseDown:(NSEvent *)theEvent{
+	[NSMenu popUpContextMenu:subMenu withEvent:theEvent forView:self];
+	
+}
 -(BOOL)acceptsFirstMouse:(NSEvent *)theEvent{
 	return YES;
 }
