@@ -44,7 +44,7 @@
 		960F99D51310D0DA0063EC76 /* SpacesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpacesView.h; sourceTree = "<group>"; };
 		960F99D61310D0DA0063EC76 /* SpacesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpacesView.m; sourceTree = "<group>"; };
 		960F9A771310E2300063EC76 /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSPrivate.h; sourceTree = "<group>"; };
-		961CEDBC132BAEF300F4F827 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file; name = ja; path = ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		961CEDBC132BAEF300F4F827 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		963C66AD1319F216005CAD5E /* ResizeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeWindow.h; sourceTree = "<group>"; };
 		963C66AE1319F216005CAD5E /* ResizeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizeWindow.m; sourceTree = "<group>"; };
 		963C674D131A1D19005CAD5E /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
