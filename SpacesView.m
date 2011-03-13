@@ -94,6 +94,11 @@
 
 	
 }
+-(void)rightMouseUp:(NSEvent *)theEvent{
+    NSWorkspace* ws=[NSWorkspace sharedWorkspace];
+    [ws launchApplication:@"Spaces.app"];
+    
+}
 -(void)removeSelf{
 	[self removeFromSuperview];
 }

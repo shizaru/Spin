@@ -17,6 +17,7 @@ enum SPACE_VIEW_ROW_AND_COL {
 	NSInteger spacesRow,spacesCol,spacesMax;
 	NSUInteger desktopID,rowAndColMode;
 	NSInteger tag;
+    BOOL enableDesktopWheel;
 
 }
 @property NSInteger spacesRow,spacesCol,spacesMax,tag;
@@ -35,5 +36,5 @@ void spacesChangedCallback(int data1, int data2, int data3, void *userParameter)
 -(void)isDeskTop:(NSEvent*)event;
 -(void)setDesktopID;
 -(void)setRowAndColMode:(NSUInteger)mode;
-
+-(void)setEnableDesktopWheel:(BOOL)flag;
 @end

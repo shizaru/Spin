@@ -30,15 +30,37 @@ NSString *SwitchSpacesNotification = @"com.apple.switchSpaces";
 		CGSRegisterConnectionNotifyProc(_CGSDefaultConnection(), spacesSwitchCallback, CGSWorkspaceChangedEvent, (void *)self);
 		CGSRegisterConnectionNotifyProc(_CGSDefaultConnection(), spacesChangedCallback, CGSWorkspaceConfigurationEnabledEvent, (void *)self);
 		CGSRegisterConnectionNotifyProc(_CGSDefaultConnection(), spacesChangedCallback, CGSWorkspaceConfigurationDisabledEvent, (void *)self);
-		[NSEvent addGlobalMonitorForEventsMatchingMask:NSScrollWheelMask
+        enableDesktopWheel=NO;
+        rowAndColMode=SWITCH_ROW_AND_COL;
+        [NSEvent addGlobalMonitorForEventsMatchingMask:NSScrollWheelMask
 											   handler:^(NSEvent* event) {
-												  
+                                                   
 												   [self isDeskTop:event];
 											   }];
-	[self setDesktopID];
-	rowAndColMode=SWITCH_ROW_AND_COL;
+        [self setDesktopID];
+
 	}
     return self;
+}
+-(void)setEnableDesktopWheel:(BOOL)flag{
+   
+    if (enableDesktopWheel==NO && flag==YES) {
+        [NSEvent addGlobalMonitorForEventsMatchingMask:NSScrollWheelMask
+											   handler:^(NSEvent* event) {
+                                                   
+												   [self isDeskTop:event];
+											   }];
+        [self setDesktopID];
+        enableDesktopWheel=YES;
+
+    }
+    else if(enableDesktopWheel==YES && flag==NO){
+
+        //[NSEvent removeMonitor:self];
+        enableDesktopWheel=NO;
+    }
+    
+    
 }
 -(void)setRowAndColMode:(NSUInteger)mode{
 	rowAndColMode=mode;
@@ -183,7 +205,7 @@ void spacesSwitchCallback(int data1, int data2, int data3, void *userParameter) 
 		viewRow=spacesCol;
 		viewCol=spacesRow;
 	}
-
+    //NSLog(@"Row %d Col %d",viewRow,viewCol);
 	NSRect rect;
 	NSRect bound=[self bounds];
 	rect.origin.x=VIEW_FRAME_SPACE;
@@ -216,9 +238,6 @@ void spacesSwitchCallback(int data1, int data2, int data3, void *userParameter) 
 	
 	[[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] set];
 	[path fill];
-	//[[NSColor colorWithDeviceRed:0.7 green:0.7 blue:0.7 alpha:0.8] set];
-	//[path setLineWidth:1.0];
-	//[path stroke];
 	[self setSpaceFrameSize];
 }
 -(void) getSpacesMax{
@@ -266,7 +285,7 @@ void spacesSwitchCallback(int data1, int data2, int data3, void *userParameter) 
 	
 }
 -(void)rightMouseDown:(NSEvent *)theEvent{
-	NSLog(@"click!");
+	 [[self superview] rightMouseDown:theEvent] ;
 	
 }
 - (void)scrollWheel:(NSEvent *)theEvent{

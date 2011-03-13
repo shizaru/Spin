@@ -17,10 +17,13 @@ enum SPIN_SUB_VIEW_TAG {
 @interface MainView : NSView {
 	IBOutlet NSMenu *subMenu;
 	NSUInteger viewMode;
+    NSUInteger topView;
 
 }
 -(void)addSwitcherView;
 -(void)removeSwitcherView;
 -(void)setSwitchViewMode:(NSInteger)mode;
 -(void)setViewMode:(NSUInteger)mode;
+-(void)setTopView:(NSUInteger)tView;
+-(void)setSpaceViewDesktopWheel:(BOOL)flag;
 @end

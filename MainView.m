@@ -22,9 +22,10 @@
 	NSUserDefaults* df=[NSUserDefaults standardUserDefaults];
 	if ([[df valueForKey:@"enableTaskSwitcher"] boolValue]) {
 		[self addSwitcherView];
+        topView=[df integerForKey:@"TOP_VIEW"];
 		
 	}
-	
+
 	BOOL mode=[df boolForKey:@"VIEW_PLACE_HOLIZONTALLY"];
 	if (mode) {
 		[self setViewMode:MAIN_VIEW_HORIZONTAL];
@@ -35,13 +36,28 @@
 	
 	
 }
+-(void)setSpaceViewDesktopWheel:(BOOL)flag{
+    SpacesBoard* spview=[[self subviews] objectAtIndex:0];
+    [spview setEnableDesktopWheel:flag];
+    
+    
+    
+}
+-(void)setTopView:(NSUInteger)tView{
+    if(topView!=tView){
+        topView=tView;
+        //NSLog(@"in setTopView topView=%d",topView);
+        [self setNeedsDisplay:YES];
+    }
+    
+}
 -(void)setViewMode:(NSUInteger)mode{
 	
 	viewMode=mode;
 	SpacesBoard* sbview=[[self subviews] objectAtIndex:0];
 	[sbview setRowAndColMode:mode];
 	[self setNeedsDisplay:YES];
-	//[self setNeedsDisplayInRect:[self bounds]];
+	
 }
 	
 -(void)addSwitcherView{
@@ -53,6 +69,7 @@
 -(void)removeSwitcherView{
 	SwitcherBoard* sbview=[[self subviews] objectAtIndex:1];
 	[sbview removeFromSuperview];
+    [self setTopView:SPIN_SPACE_VIEW];
 	
 }
 -(void)setSwitchViewMode:(NSInteger)mode{
@@ -78,36 +95,56 @@
 	[path fill];
 	// draw subview
 	NSArray *views=[self subviews];
-	if(views){
-		NSRect viewBound=[self bounds];
-		NSRect rect;
-		//size of subview
-		if (viewMode==MAIN_VIEW_HORIZONTAL) {
-			rect.size.width=(viewBound.size.width /[views count])-VIEW_MARGIN*2-2 ;
-			rect.size.height=viewBound.size.height-(VIEW_MARGIN*2+VIEW_TOPZONE_MARGIN);
-		
-			//position of subview
-			for (NSInteger i=0;i<[views count];i++){
-				NSView* sbview=[views objectAtIndex:i];
-				rect.origin.x=VIEW_MARGIN+VIEW_MARGIN*i +viewBound.origin.x+((rect.size.width)* i)+VIEW_MARGIN;
-				rect.origin.y=viewBound.origin.y+VIEW_MARGIN;
-				
-				[sbview setFrame:rect];
-			}
-		}
-		else{
-			rect.size.width=viewBound.size.width-(VIEW_MARGIN*2);
-			rect.size.height=(viewBound.size.height /[views count])-VIEW_MARGIN*2-2 ;
-			for (NSInteger i=0;i<[views count];i++){
-				NSView* sbview=[views objectAtIndex:i];
-				//rect.origin.y=VIEW_MARGIN+VIEW_MARGIN*i +viewBound.origin.y+((rect.size.height)* i)+VIEW_MARGIN;
-				rect.origin.y=viewBound.size.height-rect.size.height-(rect.size.height* i)-VIEW_MARGIN-VIEW_TOPZONE_MARGIN;
-				rect.origin.x=viewBound.origin.x+VIEW_MARGIN;
-				
-				[sbview setFrame:rect];
-			}
-		}
-	}
+    NSRect viewBound=[self bounds];
+    NSRect rect;
+    
+    if([views count]==1){
+        
+        topView=SPIN_SPACE_VIEW;
+    }
+    
+
+            //size of subview
+    if (viewMode==MAIN_VIEW_HORIZONTAL) {
+        rect.size.width=(viewBound.size.width /[views count])-VIEW_MARGIN*2-2 ;
+        rect.size.height=viewBound.size.height-(VIEW_MARGIN*2+VIEW_TOPZONE_MARGIN);
+    
+        //position of subview
+        for (NSInteger i=0;i<[views count];i++){
+            
+            NSView* sbview=[views objectAtIndex:i];
+            if (i==topView) {
+                rect.origin.x=VIEW_MARGIN+viewBound.origin.x+VIEW_MARGIN;
+                rect.origin.y=viewBound.origin.y+VIEW_MARGIN;
+            }
+            else{
+                
+                rect.origin.x=VIEW_MARGIN*2 +viewBound.origin.x+rect.size.width+VIEW_MARGIN;
+                rect.origin.y=viewBound.origin.y+VIEW_MARGIN;
+            }
+                            
+            [sbview setFrame:rect];
+        }
+    }
+    else{
+        rect.size.width=viewBound.size.width-(VIEW_MARGIN*2);
+        rect.size.height=(viewBound.size.height /[views count])-VIEW_MARGIN*2-2 ;
+        for (NSInteger i=0;i<[views count];i++){
+            NSView* sbview=[views objectAtIndex:i];
+            //rect.origin.y=VIEW_MARGIN+VIEW_MARGIN*i +viewBound.origin.y+((rect.size.height)* i)+VIEW_MARGIN;
+            if (i==topView) {
+                rect.origin.y=viewBound.size.height-rect.size.height-VIEW_MARGIN-VIEW_TOPZONE_MARGIN;
+                rect.origin.x=viewBound.origin.x+VIEW_MARGIN;
+            }
+            else{
+                rect.origin.y=viewBound.size.height-rect.size.height-rect.size.height-VIEW_MARGIN-VIEW_TOPZONE_MARGIN;
+                rect.origin.x=viewBound.origin.x+VIEW_MARGIN;
+            }
+            
+            [sbview setFrame:rect];
+        }
+    }
+
 	[NSGraphicsContext restoreGraphicsState];
 		
 			

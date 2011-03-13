@@ -85,7 +85,7 @@
 					<object class="NSMenuItem" id="498809775">
 						<reference key="NSMenu" ref="530800498"/>
 						<bool key="NSIsAlternate">YES</bool>
-						<string key="NSTitle">about Spin</string>
+						<string key="NSTitle">Spinについて</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<object class="NSCustomResource" key="NSOnImage" id="249635826">
@@ -100,7 +100,7 @@
 					<object class="NSMenuItem" id="650831896">
 						<reference key="NSMenu" ref="530800498"/>
 						<bool key="NSIsAlternate">YES</bool>
-						<string key="NSTitle">Preferences</string>
+						<string key="NSTitle">環境設定</string>
 						<string key="NSKeyEquiv">,</string>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -110,7 +110,7 @@
 					<object class="NSMenuItem" id="924503014">
 						<reference key="NSMenu" ref="530800498"/>
 						<bool key="NSIsAlternate">YES</bool>
-						<string key="NSTitle">Quit Spin</string>
+						<string key="NSTitle">Spinを終了</string>
 						<string key="NSKeyEquiv">q</string>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -247,8 +247,12 @@
 							<object class="NSButtonCell" key="NSCell" id="326314892">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">VIews placed horizontally</string>
-								<reference key="NSSupport" ref="570386715"/>
+								<string key="NSContents">ビューを水平方向に配置</string>
+								<object class="NSFont" key="NSSupport" id="527144984">
+									<string key="NSName">HiraKakuProN-W3</string>
+									<double key="NSSize">13</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<reference key="NSControlView" ref="166293768"/>
 								<int key="NSButtonFlags">1211912703</int>
 								<int key="NSButtonFlags2">2</int>
@@ -300,7 +304,7 @@
 										<object class="NSButton" id="298266314">
 											<reference key="NSNextResponder" ref="465097011"/>
 											<int key="NSvFlags">268</int>
-											<string key="NSFrame">{{27, 117}, {168, 18}}</string>
+											<string key="NSFrame">{{27, 117}, {178, 18}}</string>
 											<reference key="NSSuperview" ref="465097011"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="174127790"/>
@@ -308,8 +312,8 @@
 											<object class="NSButtonCell" key="NSCell" id="919646614">
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">0</int>
-												<string key="NSContents">Enable TaskSwitcher</string>
-												<reference key="NSSupport" ref="570386715"/>
+												<string key="NSContents">タスクスイッチャを有効化</string>
+												<reference key="NSSupport" ref="527144984"/>
 												<reference key="NSControlView" ref="298266314"/>
 												<int key="NSButtonFlags">1211912703</int>
 												<int key="NSButtonFlags2">2</int>
@@ -332,8 +336,8 @@
 											<object class="NSTextFieldCell" key="NSCell" id="288163359">
 												<int key="NSCellFlags">68288064</int>
 												<int key="NSCellFlags2">272630784</int>
-												<string key="NSContents">Top View</string>
-												<reference key="NSSupport" ref="570386715"/>
+												<string key="NSContents">先頭に表示</string>
+												<reference key="NSSupport" ref="527144984"/>
 												<reference key="NSControlView" ref="174127790"/>
 												<reference key="NSBackgroundColor" ref="490743528"/>
 												<reference key="NSTextColor" ref="941505820"/>
@@ -757,8 +761,8 @@
 							<reference ref="927998696"/>
 							<reference ref="166356913"/>
 							<reference ref="93606198"/>
-							<reference ref="166293768"/>
 							<reference ref="204377348"/>
+							<reference ref="166293768"/>
 						</array>
 						<reference key="parent" ref="400153077"/>
 					</object>

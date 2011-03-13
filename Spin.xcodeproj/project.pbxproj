@@ -44,15 +44,14 @@
 		960F99D51310D0DA0063EC76 /* SpacesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpacesView.h; sourceTree = "<group>"; };
 		960F99D61310D0DA0063EC76 /* SpacesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpacesView.m; sourceTree = "<group>"; };
 		960F9A771310E2300063EC76 /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSPrivate.h; sourceTree = "<group>"; };
+		961CEDBC132BAEF300F4F827 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file; name = ja; path = ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		963C66AD1319F216005CAD5E /* ResizeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeWindow.h; sourceTree = "<group>"; };
 		963C66AE1319F216005CAD5E /* ResizeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizeWindow.m; sourceTree = "<group>"; };
 		963C674D131A1D19005CAD5E /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		963C674E131A1D19005CAD5E /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
-		963C6767131A37D8005CAD5E /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Japanese; path = "Japanese.lproj/Spin-Info.plist"; sourceTree = "<group>"; };
-		963C676E131A3B21005CAD5E /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		963C6772131A3BF1005CAD5E /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		963C6774131A3C06005CAD5E /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9670A54E131A8F4C00F42DFA /* spin.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = spin.icns; sourceTree = "<group>"; };
+		9683754A132BAC540006A2BA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = "ja.lproj/Spin-Info.plist"; sourceTree = "<group>"; };
 		96F6F9A5131BBC90002B2275 /* SwitcherBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitcherBoard.h; sourceTree = "<group>"; };
 		96F6F9A6131BBC90002B2275 /* SwitcherBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitcherBoard.m; sourceTree = "<group>"; };
 		96F8CFF5131E548B000E949D /* SwitcherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitcherView.h; sourceTree = "<group>"; };
@@ -198,6 +197,7 @@
 				Japanese,
 				French,
 				German,
+				ja,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Spin */;
 			projectDirPath = "";
@@ -247,7 +247,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				089C165DFE840E0CC02AAC07 /* English */,
-				963C676E131A3B21005CAD5E /* Japanese */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -256,6 +255,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1DDD58150DA1D0A300B32029 /* English */,
+				961CEDBC132BAEF300F4F827 /* ja */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8D1107310486CEB800E47090 /* English */,
-				963C6767131A37D8005CAD5E /* Japanese */,
+				9683754A132BAC540006A2BA /* ja */,
 			);
 			name = "Spin-Info.plist";
 			sourceTree = "<group>";
@@ -272,7 +272,6 @@
 		963C6771131A3BF1005CAD5E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				963C6772131A3BF1005CAD5E /* Japanese */,
 				963C6774131A3C06005CAD5E /* English */,
 			);
 			name = Localizable.strings;
